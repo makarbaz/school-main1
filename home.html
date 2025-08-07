@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peregrin1 - Comprehensive Education Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        }
+        
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://placehold.co/150x60" alt="Peregrin1 Logo - Modern education solutions" class="h-10">
+                        <span class="ml-2 text-xl font-bold text-gray-800">Peregrin1</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Transforming Education with Integrated Solutions
+            </h1>
+            <p class="mt-6 text-xl text-blue-100 max-w-3xl mx-auto">
+                Comprehensive educational services from school management to Olympiad training, ensuring excellence at every level.
+            </p>
+            <div class="mt-10">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- School Management System Box -->
+        <div class="bg-white rounded-lg service-card mb-8 p-8 relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="img/smsystem.jpg" alt="SchoolManagementSystem"  class="rounded-lg w-full h-auto"  style="filter: 10px;">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">School Management System</h2>
+                    <p class="text-gray-600 mb-4">
+                        Our comprehensive school management platform streamlines administrative tasks, student tracking, fee management, attendance records, and academic reporting - all in one integrated system. Designed specifically for educational institutions to improve efficiency and transparency.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700">Automated attendance tracking</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700">Academic performance analytics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700">Parent-teacher communication portal</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700">Customizable report card generation</span>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        Learn More About School Management
+                    </a>
+                </div>
+            </div>
+            <div class="badge">1</div>
+        </div>
+
+        <!-- CBSE and ICSE Affiliation Box -->
+        <div class="bg-white rounded-lg service-card mb-8 p-8 relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="img/school.jpg" alt="Official CBSE and ICSE certification documents displayed on a wooden table" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">CBSE & ICSE Affiliation Support</h2>
+                    <p class="text-gray-600 mb-4">
+                        Expert guidance through the entire affiliation process with India's top educational boards. We provide end-to-end assistance from documentation preparation to facility audits and compliance verification for both CBSE and ICSE boards.
+                    </p>
+                    <div class="flex flex-wrap mb-4">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide mr-2 mb-2">Documentation</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide mr-2 mb-2">Compliance</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide mr-2 mb-2">Infrastructure</span>
+                        <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide mr-2 mb-2">Training</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">CBSE Affiliation</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Complete application processing</li>
+                                <li>Infrastructure planning</li>
+                                <li>Faculty qualification support</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">ICSE Affiliation</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Document preparation</li>
+                                <li>Curriculum alignment</li>
+                                <li>Inspection preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        Explore Affiliation Services
+                    </a>
+                </div>
+            </div>
+            <div class="badge">2</div>
+        </div>
+
+        <!-- Teacher Training & Coaching Box -->
+        <div class="bg-white rounded-lg service-card mb-8 p-8 relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="img/training.jpg" alt="Teachers and students engaged in interactive classroom session with digital tools" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Dronakulam Coaching</h2>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive professional development programs for educators combined with specialized coaching for students targeting NEET, IIT, and other competitive exams. Our hybrid (online + offline) training modules empower teachers with modern pedagogical techniques while preparing students for academic excellence.
+                    </p>
+                    <div class="flex mb-4">
+                        <div class="mr-4">
+                            <div class="text-sm text-gray-500">Programs Offered</div>
+                            <div class="text-lg font-semibold text-blue-600">15+</div>
+                        </div>
+                        <div class="mr-4">
+                            <div class="text-sm text-gray-500">Training Hours</div>
+                            <div class="text-lg font-semibold text-blue-600">200+</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-500">Success Rate</div>
+                            <div class="text-lg font-semibold text-blue-600">92%</div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Teacher Training Modules</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Curriculum implementation</li>
+                                <li>Classroom management</li>
+                                <li>Digital teaching tools</li>
+                                <li>Assessment techniques</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Student Coaching</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>NEET/JEE Foundation</li>
+                                <li>Regular Academic Support</li>
+                                <li>Test preparation</li>
+                                <li>Doubts solving sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <a href="coaching.html" class="mr-4 mb-4 inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                            Teacher Programs
+                        </a>
+                        <a href="#" class="mr-4 mb-4 inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                            NEET/JEE Coaching
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="badge">3</div>
+        </div>
+
+        <!-- Infrastructure Development Box -->
+        <div class="bg-white rounded-lg service-card mb-8 p-8 relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="img/libraryst_06.jpg" alt="Modern science laboratory with well-equipped benches and digital equipment" class="rounded-lg w-full h-auto" style="object-fit: cover; filter: none;">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Infrastructure Development & Library Setup</h2>
+                    <p class="text-gray-600 mb-4">
+                        Transform your educational institution with our complete infrastructure solutions including state-of-the-art laboratories, modern libraries, digital classrooms, and smart learning spaces. We provide turnkey solutions from planning to implementation with quality assurance at every stage.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <svg class="h-8 w-8 text-blue-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+                            </svg>
+                            <span class="text-sm text-gray-700">Library Design</span>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <svg class="h-8 w-8 text-blue-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            </svg>
+                            <span class="text-sm text-gray-700">Lab Setup</span>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <svg class="h-8 w-8 text-blue-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-sm text-gray-700">Digital Class</span>
+                        </div>
+                        <div class="bg-gray-100 p-3 rounded-lg text-center">
+                            <svg class="h-8 w-8 text-blue-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                            </svg>
+                            <span class="text-sm text-gray-700">Smart Furniture</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Laboratory Solutions</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Physics/Chemistry/Biology Labs</li>
+                                <li>Mathematics Lab</li>
+                                <li>Language Lab</li>
+                                <li>Robotics/STEM Labs</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Library Services</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Digital Resource Integration</li>
+                                <li>Reading Space Design</li>
+                                <li>Learning Resource Center</li>
+                                <li>Book Acquisition</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        Explore Infrastructure Services
+                    </a>
+                </div>
+            </div>
+            <div class="badge">4</div>
+        </div>
+
+        <!-- Skill Development & Employment Box -->
+        <div class="bg-white rounded-lg service-card mb-8 p-8 relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="img/skill.png" alt="Young professionals working on laptops in a modern coworking space" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Skill Development & Employment Program</h2>
+                    <p class="text-gray-600 mb-4">
+                        Bridging the gap between education and employability through targeted skill development programs. Our career-oriented courses and vocational training empower students with practical skills that meet current industry demands, enhancing their employment prospects.
+                    </p>
+                    <div class="relative pt-1 mb-6">
+                        <div class="flex mb-2 items-center justify-between">
+                            <div>
+                                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                                    Placements
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-semibold inline-block text-blue-600">
+                                    85% Placement Rate
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+                            <div style="width:85%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-600"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Skill Programs</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Digital Literacy</li>
+                                <li>Communication Skills</li>
+                                <li>Financial Literacy</li>
+                                <li>Entrepreneurship</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Vocational Training</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Computer Applications</li>
+                                <li>Retail Management</li>
+                                <li>Healthcare Basics</li>
+                                <li>Technical Skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <a href="skill.html" class="mr-4 mb-4 inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                            View Skill Courses
+                        </a>
+                        <a href="#" class="mr-4 mb-4 inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                            Partner With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="badge">5</div>
+        </div>
+
+        <!-- Olympiad Box -->
+        <div class="bg-white rounded-lg service-card p-8 relative">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                    <img src="https://placehold.co/500x300" alt="Students participating in Olympiad exams in a well-lit examination hall" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Olympiad Training Program</h2>
+                    <p class="text-gray-600 mb-4">
+                        Specialized training programs to prepare students for national and international Olympiads across subjects like Mathematics, Science, Astronomy, and more. Our Olympiad experts provide comprehensive coaching through structured modules designed to develop conceptual clarity and problem-solving skills.
+                    </p>
+                    <div class="flex mb-4">
+                        <div class="mr-4">
+                            <div class="text-sm text-gray-500">Olympiads Covered</div>
+                            <div class="text-lg font-semibold text-blue-600">10+</div>
+                        </div>
+                        <div class="mr-4">
+                            <div class="text-sm text-gray-500">National Winners</div>
+                            <div class="text-lg font-semibold text-blue-600">125+</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-500">International Qualifiers</div>
+                            <div class="text-lg font-semibold text-blue-600">38+</div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Training Approach</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>Concept Building</li>
+                                <li>Problem Solving Techniques</li>
+                                <li>Mock Olympiad Tests</li>
+                                <li>Previous Year Papers Analysis</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Key Olympiads</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600">
+                                <li>National Science Olympiad (NSO)</li>
+                                <li>International Math Olympiad (IMO)</li>
+                                <li>National Cyber Olympiad (NCO)</li>
+                                <li>International English Olympiad (IEO)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <a href="praadis-olympiad.html" class="mr-4 mb-4 inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                            Olympiad Schedule
+                        </a>
+                        <a href="#" class="mr-4 mb-4 inline-block px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="badge">6</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">School Management</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">CBSE/ICSE Affiliation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Teacher Training</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Infrastructure Setup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase mb-4">Academics</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">NEET/JEE Coaching</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Olympiad Training</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Skill Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Career Guidance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300 text-sm">info@peregrin1.com</li>
+                        <li class="text-gray-300 text-sm">+91 1234567890</li>
+                        <li class="text-gray-300 text-sm">123, Education Hub<br>New Delhi, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 Peregrin1. All rights reserved.
+                </p>
+                <div class="flex mt-4 md:mt-0 space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.188 8.188 0 01-2.36.644 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <span class="sr-only">YouTube</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 01-1.768 1.768C18.255 19.998 12 20 12 20s-6.255-.002-7.814-.418a2.505 2.505 0 01-1.768-1.768C2.002 15.255 2 12 2 12s.002-3.255.418-4.814a2.507 2.507 0 011.768-1.768C5.745 4.002 12 4 12 4s6.255.002 7.812.418zM12 15a3 3 0 110-6 3 3 0 010 6z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

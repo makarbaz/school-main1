@@ -1,294 +1,427 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home Tutor Coaching</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorPro - Home Tutor Coaching</title>
+    <!-- Use Inter font for a clean and modern look -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --brand: #0d6efd;
-            --muted: #1263aa;
-        }
-
         body {
-            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            font-family: 'Inter', sans-serif;
         }
-
-        .hero {
+        /* Custom styles for a unique touch */
+        .badge-feature {
+            background-color: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .price-card-border {
+            border-color: #0d6efd;
+        }
+        .hero-bg {
             background: linear-gradient(180deg, rgba(13, 110, 253, 0.08), rgba(15, 42, 82, 0.02));
         }
-
-        .tutor-card img {
-            height: 200px;
-            object-fit: cover;
+        /* New custom styles for the modal overlay */
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
         }
-
-        .price-card {
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(20, 20, 50, 0.06);
-        }
-
-        footer {
-            background: #0b1226;
-            color: #fff;
-        }
-
-        .badge-feature {
-            background: rgba(13, 110, 253, 0.1);
-            color: var(--brand);
-            border-radius: 999px;
-            padding: 0.25rem 0.6rem;
-            font-weight: 600;
+        .modal-container {
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body>
-
-    <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">TutorPro</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navc">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navc">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="#contact">Book Trial</a></li>
-                </ul>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a class="text-3xl font-extrabold text-blue-600" href="#">TutorPro</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200" href="#services">Services</a>
+                <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200" href="#tutors">Tutors</a>
+                <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200" href="#pricing">Pricing</a>
+                <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200" href="#contact">Contact</a>
+                <!-- New signup buttons -->
+                <button id="student-signup-btn" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200">Student Sign Up</button>
+                <button id="teacher-signup-btn" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-full hover:bg-gray-300 transition-colors duration-200">Teacher Sign Up</button>
+                <a class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200" href="#contact">Book Trial</a>
             </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero py-5">
-        <div class="container py-4 bg-blue-100">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold">Personal Home Tutors & Coaching — Learn Faster at Home</h1>
-                    <p class="text-muted fs-5">1-on-1 tuition, small group classes, exam-focused coaching for
-                        CBSE/ICSE/Boards & competitive exams. Online or in-person in your city.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary btn-lg" href="#contact">Get Free Trial</a>
-                        <a class="btn btn-outline-secondary btn-lg" href="#pricing">See Plans</a>
+    <!-- Hero Section -->
+    <section class="hero-bg py-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                        Personal Home Tutors & Coaching — Learn Faster at Home
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6">
+                        1-on-1 tuition, small group classes, exam-focused coaching for CBSE/ICSE/Boards & competitive exams. Online or in-person in your city.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105" href="#contact">Get Free Trial</a>
+                        <a class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full border border-blue-600 hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105" href="#pricing">See Plans</a>
                     </div>
-
-                    <div class="mt-4">
-                        <span class="badge-feature me-2">Experienced Tutors</span>
-                        <span class="badge-feature me-2">Flexible Timing</span>
+                    <div class="mt-8 flex flex-wrap gap-2">
+                        <span class="badge-feature">Experienced Tutors</span>
+                        <span class="badge-feature">Flexible Timing</span>
                         <span class="badge-feature">Syllabus-aligned</span>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d45f28b2-0d09-45ef-891f-adeb1cf5c354.png"  class="img-fluid">
-                    
+                <div class="lg:w-1/2 text-center mt-8 lg:mt-0">
+                    <img src="https://placehold.co/600x400/93c5fd/1e3a8a?text=Learning+Made+Easy" alt="Student learning with a tutor" class="w-full h-auto rounded-xl shadow-2xl">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Our Services</h2>
-                <p class="text-muted">Tailored learning programmes for every grade and goal.</p>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Our Services</h2>
+                <p class="text-lg text-gray-600">Tailored learning programmes for every grade and goal.</p>
             </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">1-on-1 Home Tuition</h5>
-                            <p class="card-text text-muted">Personalised lessons at your home with scheduled progress
-                                reviews and weekly reports.</p>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <div class="text-blue-600 text-4xl mb-4 text-center">🧑‍🏫</div>
+                    <h5 class="text-xl font-bold mb-2 text-center">1-on-1 Home Tuition</h5>
+                    <p class="text-gray-600 text-center">Personalised lessons at your home with scheduled progress reviews and weekly reports.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Online Live Classes</h5>
-                            <p class="card-text text-muted">Interactive online classes, recorded sessions, and
-                                doubt-clearing hours with the same tutor.</p>
-                        </div>
-                    </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <div class="text-blue-600 text-4xl mb-4 text-center">💻</div>
+                    <h5 class="text-xl font-bold mb-2 text-center">Online Live Classes</h5>
+                    <p class="text-gray-600 text-center">Interactive online classes, recorded sessions, and doubt-clearing hours with the same tutor.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Exam Prep & Mock Tests</h5>
-                            <p class="card-text text-muted">Board exam patterns, competitive exam strategy, and weekly
-                                mock tests with analysis.</p>
-                        </div>
-                    </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <div class="text-blue-600 text-4xl mb-4 text-center">📝</div>
+                    <h5 class="text-xl font-bold mb-2 text-center">Exam Prep & Mock Tests</h5>
+                    <p class="text-gray-600 text-center">Board exam patterns, competitive exam strategy, and weekly mock tests with analysis.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TUTORS -->
-    <section id="tutors" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Meet Our Tutors</h2>
-                <p class="text-muted">Carefully selected & background-verified mentors.</p>
+    <!-- Tutors Section -->
+    <section id="tutors" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Meet Our Tutors</h2>
+                <p class="text-lg text-gray-600">Carefully selected & background-verified mentors.</p>
             </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card tutor-card">
-                        <img src="https://via.placeholder.com/600x400?text=Tutor+1" class="card-img-top" alt="Tutor 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Ms. Priya Sharma</h5>
-                            <p class="text-muted mb-1">Math & Physics • B.Tech, 7 yrs experience</p>
-                            <p class="mb-0"><small>Specialises in JEE foundation for grades 9-12.</small></p>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tutor Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/93c5fd/1e3a8a?text=Tutor+Priya" class="w-full h-48 object-cover rounded-t-lg" alt="Tutor Priya Sharma">
+                    <div class="p-6">
+                        <h5 class="text-xl font-bold mb-1">Ms. Priya Sharma</h5>
+                        <p class="text-sm text-gray-500 mb-2">Math & Physics • B.Tech, 7 yrs experience</p>
+                        <p class="text-gray-600 text-sm">Specialises in JEE foundation for grades 9-12.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card tutor-card">
-                        <img src="https://via.placeholder.com/600x400?text=Tutor+2" class="card-img-top" alt="Tutor 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Mr. Anil Verma</h5>
-                            <p class="text-muted mb-1">Chemistry • M.Sc, 5 yrs experience</p>
-                            <p class="mb-0"><small>Exam-focused lessons and lab-demo resources.</small></p>
-                        </div>
+                <!-- Tutor Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/93c5fd/1e3a8a?text=Tutor+Anil" class="w-full h-48 object-cover rounded-t-lg" alt="Tutor Anil Verma">
+                    <div class="p-6">
+                        <h5 class="text-xl font-bold mb-1">Mr. Anil Verma</h5>
+                        <p class="text-sm text-gray-500 mb-2">Chemistry • M.Sc, 5 yrs experience</p>
+                        <p class="text-gray-600 text-sm">Exam-focused lessons and lab-demo resources.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card tutor-card">
-                        <img src="https://via.placeholder.com/600x400?text=Tutor+3" class="card-img-top" alt="Tutor 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Ms. Saniya Khan</h5>
-                            <p class="text-muted mb-1">English & SAT • 6 yrs experience</p>
-                            <p class="mb-0"><small>Comprehension & writing skills, IELTS/SAT coaching.</small></p>
-                        </div>
+                <!-- Tutor Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/93c5fd/1e3a8a?text=Tutor+Saniya" class="w-full h-48 object-cover rounded-t-lg" alt="Tutor Saniya Khan">
+                    <div class="p-6">
+                        <h5 class="text-xl font-bold mb-1">Ms. Saniya Khan</h5>
+                        <p class="text-sm text-gray-500 mb-2">English & SAT • 6 yrs experience</p>
+                        <p class="text-gray-600 text-sm">Comprehension & writing skills, IELTS/SAT coaching.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="py-5">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Pricing Plans</h2>
-                <p class="text-muted">Simple, transparent pricing. Custom plans available.</p>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Pricing Plans</h2>
+                <p class="text-lg text-gray-600">Simple, transparent pricing. Custom plans available.</p>
             </div>
-
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="p-4 price-card text-center">
-                        <h5>Basic</h5>
-                        <p class="fs-3 fw-bold">₹6,000 / month</p>
-                        <p class="text-muted">8 sessions (1 hr each) • Group class</p>
-                        <ul class="list-unstyled text-start mt-3 mb-4">
-                            <li>✔ Syllabus coverage</li>
-                            <li>✔ Weekly assignments</li>
-                            <li>✖ 1-on-1 sessions</li>
-                        </ul>
-                        <a class="btn btn-outline-primary" href="#contact">Choose</a>
-                    </div>
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-xl text-center md:w-1/3">
+                    <h5 class="text-2xl font-bold mb-2">Basic</h5>
+                    <p class="text-5xl font-extrabold text-blue-600">₹6,000</p>
+                    <p class="text-gray-600 mb-4">/ month</p>
+                    <p class="text-gray-500 text-sm mb-6">8 sessions (1 hr each) • Group class</p>
+                    <ul class="list-none text-left space-y-2 mb-8">
+                        <li class="flex items-center text-gray-700"><span class="text-blue-600 mr-2">✓</span> Syllabus coverage</li>
+                        <li class="flex items-center text-gray-700"><span class="text-blue-600 mr-2">✓</span> Weekly assignments</li>
+                        <li class="flex items-center text-gray-400 line-through"><span class="text-gray-400 mr-2">✗</span> 1-on-1 sessions</li>
+                    </ul>
+                    <a class="w-full inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full border border-blue-600 hover:bg-gray-100 transition-colors duration-200" href="#contact">Choose</a>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="p-4 price-card text-center border border-2">
-                        <h5>Standard</h5>
-                        <p class="fs-3 fw-bold">₹12,000 / month</p>
-                        <p class="text-muted">8 sessions (1.5 hr) • Small group / 1-on-1 available</p>
-                        <ul class="list-unstyled text-start mt-3 mb-4">
-                            <li>✔ Doubt hours</li>
-                            <li>✔ Progress report</li>
-                            <li>✔ Mock tests</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Choose</a>
-                    </div>
+                <!-- Standard Plan (Highlighted) -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl text-center md:w-1/3 border-4 price-card-border transform scale-105 relative">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Most Popular</div>
+                    <h5 class="text-2xl font-bold mb-2">Standard</h5>
+                    <p class="text-5xl font-extrabold text-blue-600">₹12,000</p>
+                    <p class="text-gray-600 mb-4">/ month</p>
+                    <p class="text-gray-500 text-sm mb-6">8 sessions (1.5 hr) • Small group / 1-on-1 available</p>
+                    <ul class="list-none text-left space-y-2 mb-8">
+                        <li class="flex items-center text-gray-700"><span class="text-blue-600 mr-2">✓</span> Doubt hours</li>
+                        <li class="flex items-center text-gray-700"><span class="text-blue-600 mr-2">✓</span> Progress report</li>
+                        <li class="flex items-center text-gray-700"><span class="text-blue-600 mr-2">✓</span> Mock tests</li>
+                    </ul>
+                    <a class="w-full inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200" href="#contact">Choose</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="fw-bold">Book a Free Trial</h3>
-                    <p class="text-muted">Tell us your child's grade and goals. We’ll match the best tutor.</p>
-
-                    <!-- NOTE: replace action with server endpoint or use mailto -->
-                    <form id="contactForm" action="https://example.com/submit" method="POST" class="mt-3">
-                        <div class="mb-3">
-                            <label class="form-label">Parent / Student Name</label>
-                            <input class="form-control" name="name" required>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                <div class="lg:w-1/2 p-8 bg-white rounded-xl shadow-xl">
+                    <h3 class="text-3xl font-bold mb-2">Book a Free Trial</h3>
+                    <p class="text-gray-600 mb-6">Tell us your child's grade and goals. We’ll match the best tutor.</p>
+                    <!-- Simple contact form -->
+                    <form action="mailto:your.email@example.com" method="post" enctype="text/plain" class="space-y-4">
+                        <div>
+                            <label class="block font-medium text-gray-700 mb-1">Parent / Student Name</label>
+                            <input type="text" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Phone / WhatsApp</label>
-                            <input class="form-control" name="phone" required>
+                        <div>
+                            <label class="block font-medium text-gray-700 mb-1">Phone / WhatsApp</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Grade / Class</label>
-                            <input class="form-control" name="grade" placeholder="e.g., Grade 10 / Class 12" required>
+                        <div>
+                            <label class="block font-medium text-gray-700 mb-1">Grade / Class</label>
+                            <input type="text" name="grade" placeholder="e.g., Grade 10 / Class 12" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Preferred Mode</label>
-                            <select class="form-select" name="mode">
+                        <div>
+                            <label class="block font-medium text-gray-700 mb-1">Preferred Mode</label>
+                            <select name="mode" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                                 <option>Online</option>
                                 <option>In-person (Home)</option>
                                 <option>Either</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Message / Goals</label>
-                            <textarea class="form-control" rows="3" name="message"></textarea>
+                        <div>
+                            <label class="block font-medium text-gray-700 mb-1">Message / Goals</label>
+                            <textarea name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
                         </div>
-                        <div class="d-flex gap-2">
-                            <button type="submit" class="btn btn-primary">Request Trial</button>
-                            <a href="tel:+911234567890" class="btn btn-outline-secondary">Call Us</a>
+                        <div class="flex gap-4">
+                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200">
+                                Request Trial
+                            </button>
+                            <a href="tel:+911234567890" class="w-full text-center bg-white text-blue-600 font-bold py-3 rounded-full border border-blue-600 hover:bg-gray-100 transition-colors duration-200">
+                                Call Us
+                            </a>
                         </div>
                     </form>
-
                 </div>
-
-                <div class="col-lg-6">
-                    <div class="p-4 bg-white rounded shadow-sm">
-                        <h5 class="mb-3">Why choose TutorPro?</h5>
-                        <ul class="list-unstyled text-muted">
-                            <li>• Personalized lesson plan</li>
-                            <li>• Flexible scheduling</li>
-                            <li>• Verified tutor profiles & background checks</li>
-                            <li>• Regular progress tracking</li>
-                        </ul>
-
-                        <div class="mt-3">
-                            <strong>Contact</strong>
-                            <p class="mb-0">Phone: +91 12345 67890</p>
-                            <p>Email: hello@tutorpro.example</p>
-                            <p class="mb-0">Location: Your city — Home & Online</p>
-                        </div>
+                <div class="lg:w-1/2 p-8 bg-blue-600 text-white rounded-xl shadow-xl">
+                    <h5 class="text-2xl font-bold mb-4">Why choose TutorPro?</h5>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-lg">
+                        <li>Personalized lesson plan</li>
+                        <li>Flexible scheduling</li>
+                        <li>Verified tutor profiles & background checks</li>
+                        <li>Regular progress tracking</li>
+                    </ul>
+                    <div>
+                        <strong class="text-lg">Contact</strong>
+                        <p class="mb-1">Phone: +91 12345 67890</p>
+                        <p class="mb-1">Email: hello@tutorpro.example</p>
+                        <p>Location: Your city — Home & Online</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-4 mt-5">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>© <strong>TutorPro</strong> <span class="text-muted">2025</span></div>
-            <div class="text-muted small">Made with ♥ for better learning</div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="mb-2 md:mb-0">&copy; <strong class="text-white">TutorPro</strong> 2025</p>
+            <p class="text-sm">Made with ♥ for better learning</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Registration Modal -->
+    <div id="signup-modal" class="hidden fixed inset-0 z-[100] overflow-y-auto modal-overlay flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-xl modal-container transform scale-95 opacity-0 transition-all duration-300">
+            <div class="p-6">
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Join TutorPro</h3>
+                    <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Tabs to switch between forms -->
+                <div class="flex border-b border-gray-200 mb-6">
+                    <button id="student-tab" class="py-2 px-4 font-bold text-center border-b-2 border-transparent text-gray-500 hover:text-blue-600 hover:border-blue-600 transition-all duration-200 focus:outline-none">Student</button>
+                    <button id="teacher-tab" class="py-2 px-4 font-bold text-center border-b-2 border-transparent text-gray-500 hover:text-blue-600 hover:border-blue-600 transition-all duration-200 focus:outline-none">Teacher</button>
+                </div>
 
+                <!-- Student Sign Up Form -->
+                <form id="student-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Grade / Class</label>
+                        <input type="text" name="grade" placeholder="e.g., Grade 10" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Subject(s)</label>
+                        <input type="text" name="subject" placeholder="e.g., Math, Science" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200">Sign Up as a Student</button>
+                </form>
+
+                <!-- Teacher Sign Up Form (hidden by default) -->
+                <form id="teacher-form" class="space-y-4 hidden">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Subjects Taught</label>
+                        <input type="text" name="subjects" placeholder="e.g., Math, Physics" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Years of Experience</label>
+                        <input type="number" name="experience" min="0" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200">Sign Up as a Teacher</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript for modal functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const signupModal = document.getElementById('signup-modal');
+            const studentSignupBtn = document.getElementById('student-signup-btn');
+            const teacherSignupBtn = document.getElementById('teacher-signup-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const studentTab = document.getElementById('student-tab');
+            const teacherTab = document.getElementById('teacher-tab');
+            const studentForm = document.getElementById('student-form');
+            const teacherForm = document.getElementById('teacher-form');
+            const modalContainer = signupModal.querySelector('.modal-container');
+
+            function openModal(userType) {
+                signupModal.classList.remove('hidden');
+                setTimeout(() => {
+                    signupModal.classList.add('opacity-100');
+                    modalContainer.classList.remove('scale-95', 'opacity-0');
+                    modalContainer.classList.add('scale-100', 'opacity-100');
+                }, 10);
+                if (userType === 'student') {
+                    showStudentForm();
+                } else if (userType === 'teacher') {
+                    showTeacherForm();
+                }
+            }
+
+            function closeModal() {
+                modalContainer.classList.remove('scale-100', 'opacity-100');
+                modalContainer.classList.add('scale-95', 'opacity-0');
+                signupModal.classList.remove('opacity-100');
+                setTimeout(() => {
+                    signupModal.classList.add('hidden');
+                }, 300);
+            }
+
+            function showStudentForm() {
+                studentForm.classList.remove('hidden');
+                teacherForm.classList.add('hidden');
+                studentTab.classList.add('border-blue-600', 'text-blue-600');
+                teacherTab.classList.remove('border-blue-600', 'text-blue-600');
+            }
+
+            function showTeacherForm() {
+                studentForm.classList.add('hidden');
+                teacherForm.classList.remove('hidden');
+                teacherTab.classList.add('border-blue-600', 'text-blue-600');
+                studentTab.classList.remove('border-blue-600', 'text-blue-600');
+            }
+
+            studentSignupBtn.addEventListener('click', () => openModal('student'));
+            teacherSignupBtn.addEventListener('click', () => openModal('teacher'));
+            closeModalBtn.addEventListener('click', closeModal);
+
+            studentTab.addEventListener('click', showStudentForm);
+            teacherTab.addEventListener('click', showTeacherForm);
+
+            // Close the modal when clicking outside of it
+            signupModal.addEventListener('click', (e) => {
+                if (e.target === signupModal) {
+                    closeModal();
+                }
+            });
+
+            // Handle form submission (placeholder for now)
+            studentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                console.log('Student form submitted');
+                // Here you would add code to handle the form data, e.g., send it to a server
+                closeModal();
+            });
+
+            teacherForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                console.log('Teacher form submitted');
+                // Here you would add code to handle the form data
+                closeModal();
+            });
+        });
+    </script>
+</body>
 </html>
+s
